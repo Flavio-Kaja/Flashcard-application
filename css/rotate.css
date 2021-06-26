@@ -1,0 +1,78 @@
+﻿
+.rotating-list li {
+    width: 330px;
+    height: 380px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    float: left;
+    list-style: none;
+    position: relative;
+    cursor: pointer;
+    font-family: 'Open Sans';
+    font-weight: 300;
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    perspective: 1000;
+}
+
+    .rotating-list li div {
+        color: #0a091e;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        overflow-x: scroll;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+.front {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    z-index: 3;
+    color: #0a091e;
+    text-align: center;
+    line-height: 20px;
+    font-size: 23px;
+    background: #c391c5;
+}
+
+.rotating-list li:hover > .front {
+    z-index: 0;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.rotating-list li:hover > .back {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+
+.back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    padding-left: 5%;
+    padding-right: 5%;
+    color: #F7EDF0;
+    text-align: center;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    background: #eec7b7;
+
+}
+
+#box1 {
+    background: #c391c5;
+    border: solid 2px black;
+}
